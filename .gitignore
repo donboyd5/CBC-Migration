@@ -4,6 +4,8 @@
 .Ruserdata
 
 _*/
+_book/
+_freeze/
 *.csv
 *.html
 *.png
