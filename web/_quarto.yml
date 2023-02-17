@@ -1,0 +1,55 @@
+project:
+  type: book
+
+# quarto publish netlify --no-render
+# quarto publish netlify --no-browser --no-prompt
+# quarto publish netlify --no-render --no-browser --no-prompt
+
+# https://quarto.org/docs/computations/execution-options.html    
+# for cell options: https://quarto.org/docs/reference/cells/cells-knitr.html
+execute:
+  eval: true
+  echo: false
+  error: false
+  warning: false
+  message: false  # not sure if allowed
+  note: false  # not sure if allowed
+  freeze: auto  # during global project renders, re-render only when source changes
+  
+editor_options: 
+  chunk_output_type: console
+
+book:
+  title: "CBC Migration Working Group"
+  # author: "Don Boyd"
+  date: today
+  date-format: long
+  chapters:
+    - index.qmd
+    # - intro.qmd
+    - links.qmd
+    - news.qmd
+    - part: "Migration"
+      chapters:
+      - migration.qmd
+    - part: "Real Estate"
+      chapters: 
+      - real_estate.qmd
+    - part: "Work From Home"
+      chapters:
+      - wfh.qmd
+    - part: "Taxes and Migration"
+      chapters:
+      - taxes.qmd
+    - bibliography.qmd
+
+bibliography: _bibliography.bib
+nocite: |
+  @*
+
+format:
+  html:
+    theme: cosmo
+
+
+

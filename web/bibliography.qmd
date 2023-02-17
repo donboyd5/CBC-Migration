@@ -1,0 +1,20 @@
+# Bibliography {.unnumbered}
+
+<!-- --- -->
+
+<!-- nocite: | -->
+
+<!--   @* -->
+
+<!-- --- -->
+
+<!-- ::: {.hidden} -->
+
+<!-- {{< include all_references.txt >}} -->
+
+<!-- ::: -->
+
+pdfs of the documents below are in the [Zotero library](https://www.zotero.org/groups/4826170/cbc_migration_working_group/collections/P5RUX9X8).
+
+::: {#refs}
+:::

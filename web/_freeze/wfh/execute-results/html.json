@@ -1,0 +1,16 @@
+{
+  "hash": "be94aaac810c47449a6af99a51ae1838",
+  "result": {
+    "markdown": "# Work from home and commuting\n\n[WFH Research Updates: January 2023](https://mailchi.mp/c06a2fead0c8/wfh-research-updates-january-2023) (Nick Bloom)\n\n![](images/image-739675782.png)\n\n## WFH Friday and Monday\n\n[tweet link for item below](https://twitter.com/I_Am_NickBloom/status/1623957245452259328?s=20)\n\n![](images/image-1456876945.png)\n\n## WFH New York City area and top 10 cities\n\nBased on:\n\nBarrero, Jose Maria, Nicholas Bloom, and Steven J. Davis, 2021. \"Why working from home will stick,\" National Bureau of Economic Research Working Paper 28731.\n\n::: column-page\n<!-- ::: {.column-screen} -->\n\n![](images/nyc_top10_wfh.png)\n:::\n\n## Commuting\n\n### Transit ridership nationally\n\nAccording to Nick Bloom, some suggestion of [stabilizing lower transit ridership](https://twitter.com/I_Am_NickBloom/status/1608455167392841729?s=20&t=X3lzgs8weWC3bUchiipC5Q).\n\n![](images/image-1124054948.png)\n\n### MTA\n\nMeanwhile MTA ridership data show slow bus and subway ridership recovery particularly on weekdays. Bridges & tunnels and commuter rail have been recoving more quickly:\n\n::: column-page\n<!-- ::: {.column-screen} -->\n\n![](images/mta_recovery.png)\n:::\n\n\n::: {.cell}\n\n:::\n",
+    "supporting": [
+      "wfh_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

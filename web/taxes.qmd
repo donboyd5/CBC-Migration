@@ -1,0 +1,6 @@
+# Taxes and migration
+
+Selected papers and reports:
+
+-   @agrawalRelocationRichMigration2018
+-   @barroDomesticMigrationState2022

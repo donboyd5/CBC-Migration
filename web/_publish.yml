@@ -1,0 +1,4 @@
+- source: project
+  netlify:
+    - id: 6da5de52-86b1-4032-9504-be5fa11b98f6
+      url: 'https://cbc-mwg.netlify.app'

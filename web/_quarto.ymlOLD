@@ -1,0 +1,110 @@
+project:
+  type: book
+  # comments: 
+  #   hypothesis: true
+
+# after checking out a new quarto-cli commit
+# exit terminal here, go to terminal in gitkraken, then
+#   cd C:\Users\donbo\quarto\quarto-cli
+#   .\configure.cmd
+
+# quarto publish netlify --no-render
+# quarto publish netlify --no-browser --no-prompt
+# quarto publish netlify --no-render --no-browser --no-prompt
+
+# https://quarto.org/docs/computations/execution-options.html    
+# for cell options: https://quarto.org/docs/reference/cells/cells-knitr.html
+# execute:
+#   freeze: auto  # re-render only when source changes
+execute:
+  eval: true
+  echo: false
+  error: false
+  warning: false
+  message: false  # not sure if allowed
+  note: false  # not sure if allowed
+  freeze: auto  # during global project renders, re-render only when source changes
+  
+# The computational results of documents executed with freeze are stored in the
+# _freeze directory, and re-used when needed to fulfill document renders. You
+# should check the contents of _freeze into version control so that others 
+# rendering the project don’t need to reproduce your computational environment
+# to render it in their environment.  
+  
+editor_options: 
+  chunk_output_type: console
+
+book:
+  title: "MTA baseline"
+  author: "Don Boyd"
+  date: today
+  date-format: long
+  chapters:
+    - index.qmd
+    - part: "Baseline"
+      chapters:
+      - intro/goals.qmd
+      - intro/boyd_questions.qmd
+    - part: "Taxes"
+      chapters: 
+      - taxes/current_taxes.qmd
+      - taxes/payroll_mobility_tax.qmd
+      - taxes/petroleum_business_tax.qmd
+      # - taxes/mortgage_recording_tax.qmd
+      - taxes/miscellaneous_revenue.qmd
+    - part: "Primers"
+      chapters:
+      - primers/primer_internet_marketplace_tax.qmd
+      - primers/primer_section_18b.qmd
+      - primers/primer_mtoa.qmd
+    - part: "County allocation"
+      chapters:
+      - countyalloc/county_allocation.qmd
+    - part: "Revenue options"
+      chapters: 
+      - options/pmt_increase_dec2022.qmd
+      - options/sales_tax_digital.qmd
+      - options/progressivity.qmd
+      - options/revenue_options.qmd
+      - options/comments_2022_11_09.qmd
+      - options/taxing_internet_access.qmd
+      - options/sales_tax_aviation_fuel.qmd
+      - options/sales_tax_capital_improvements.qmd
+      - options/sales_tax_video_streaming.qmd
+    - part: "Analysis of options"
+      chapters:
+      - option_analysis/breakdowns.qmd
+      - option_analysis/pmt_increase.qmd
+      - option_analysis/pmt_howlarge.qmd
+      - option_analysis/pmt_impact_employment.qmd
+      - option_analysis/pmt_payroll_tax_rates.qmd
+      - option_analysis/pmt_tcja_ptet.qmd
+    - part: "MTOA and MMTOA"
+      chapters: 
+      - mtoa/mtoa.qmd
+    - part: "Payroll mobility tax base"
+      chapters:
+      - pmtbase/payroll_mobility_tax_base.qmd
+      - pmtbase/pmt_legislation.qmd
+      - pmtbase/pmt_reconcile_data.qmd
+      - pmtbase/pmt_forecast.qmd
+    - bibliography.qmd      
+    - part: "Appendix: Project notes"
+      chapters:
+      - project/schedule.qmd
+      - project/data_notes.qmd
+      - project/resources.qmd
+      - project/misc_notes.qmd      
+
+bibliography: _baseline.bib
+nocite: |
+  @*
+
+format:
+  html:
+    theme: cosmo
+  # pdf:
+  #   documentclass: scrreprt
+
+
+
