@@ -1,5 +1,21 @@
 # News from Working Group members
 
+Arpit Gupta (6/29/2023) sent an Economic Innovation Group article, [Young Families Have Not Returned to Large Cities Post-Pandemic](https://eig.org/2023-family-exodus/), with this note about double-digit drops in NYC:
+
+> ...change in the Age 0-4 population from April 2020 to July 2022.
+New York County: -14%
+Kings County: -12.3%
+Queens County: -13.7%
+Bronx: -11.6%
+
+
+Ana Champeny (5/28/2023) sent a *NY Post* article, [NYC will use cell data to study impact hybrid work has on mass transit](https://nypost.com/2023/05/28/nyc-planners-weigh-impact-on-hybrid-work-on-transit-economy/), about two upcoming studies:
+
+-   a city Department of Planning analysis of cell phone use in office buildings and other locations to better understand people’s movements
+
+-   a city Department of Transportation analysis of the “long-term implication of teleworking” on vehicle miles traveled by motorists during the work day
+
+
 Bob Scardamalia sent the figure below with the following note:
 
 > I'm attaching an historical graphic of age specific migration for Manhattan. It clearly shows that some demographic forces apply through both good and bad economic cycles. While Manhattan is an exceptional example, it's not the only one that shows very distinct and stable patterns of age-related migration...It comes out of long-time work of the Pop Center at the Univ of Wisc-Madison. Public website and the citation is at the bottom. It's available for all counties in the US and I can pull together ones of interest to the group.

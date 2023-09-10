@@ -4,6 +4,7 @@ project:
 # quarto publish netlify --no-render
 # quarto publish netlify --no-browser --no-prompt
 # quarto publish netlify --no-render --no-browser --no-prompt
+# https://cbc-mwg.netlify.app
 
 # https://quarto.org/docs/computations/execution-options.html    
 # for cell options: https://quarto.org/docs/reference/cells/cells-knitr.html

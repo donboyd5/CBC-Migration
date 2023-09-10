@@ -2,6 +2,47 @@
 
 ## Meetings
 
+### Meeting #4, Wednesday, June 28, 2023 12-2pm
+
+-   [Zoom link](https://us02web.zoom.us/j/85363066529)
+-   [Agenda](https://drive.google.com/file/d/1lGkf3wbM7NqzlG7R5nqe0pklHEvkwyUX/view?usp=sharing)
+-   Karen Schlain, NYC Department of Finance, [Using Personal Income Tax Data to Analyze Migration](https://drive.google.com/file/d/1l7mcVZt8wWAmv6xAbzrxzQjBbYvHuPmt/view?usp=sharing)
+-   Owen Zidar, Princeton, [Main Street Millionaires](https://drive.google.com/file/d/1kYno9OwpLlbHdzUkUjigMG1Dij1D-Dov/view?usp=sharing)
+-   CBC fall conference [discussion document](https://drive.google.com/file/d/1kj7Xn2vlR5QH-KHhSqnoeYMEiuSYEuei/view?usp=sharing)
+
+-   [Post-meeting notes](https://drive.google.com/file/d/1m1vCYtraS_Os1P46U3PXRkf8ox9ghYKi/view?pli=1)
+
+<!-- with full transcript (https://drive.google.com/file/d/1lmPAP99aakYlnjoD40txtLL-YIivMKIH/view?pli=1) -->
+
+### Meeting #3, Monday, April 17, 2023 12-2pm
+
+-   [Zoom link](https://us02web.zoom.us/j/89958552957)
+-   [Agenda](https://drive.google.com/file/d/1joX3-VgVWYFv4ubEnBIDG5QeOg5A1E7N/view?usp=share_link)
+-   Presentations
+    -   [Jonathan Miller: The Pandemic Era Shift In The Housing Mix](https://drive.google.com/file/d/1j9f12IOoEdGvqTLQE82Lcg8YMYhVKZkG/view?usp=share_link)
+    -   [Arpit Gupta: Urban Flight, Remote Work, and the Urban Doom Loop](https://drive.google.com/file/d/1k2P8swLF-y6mLxdQ1Ev5v4COO7WKMa2y/view)
+    -   [Don Boyd: Selected Research on High-Earner Taxes and Migration](https://drive.google.com/file/d/1jmDWOzGGMsMY9T3Yn_shccRFeTImX_vy/view?usp=share_link)
+    -   [Google Drive folder with selected papers on migration](https://drive.google.com/drive/folders/1dhlx6dYD4l-Ii0fU9yhaaide9ebcG7w9)
+
+-   [Post-meeting notes](https://drive.google.com/file/d/1m0NOwL9X8Ri1X-gFhMUQCuKEzLsAUnFB/view?pli=1)
+
+<!-- with transcript (https://drive.google.com/file/d/1lnM-MM5p9TdCemS-18_yFEq9JDwFvnj3/view?pli=1) -->
+
+
+```{r}
+#| label: next_meeting
+#| include: false
+
+# ### Meeting #4, Wednesday, June 28, noon-2 pm
+# -   [Zoom link](https://us02web.zoom.us/j/85363066529)
+# -   [Agenda]()
+# -   Presentations
+#     -   Tax data and migration (), Karen Schlain and colleagues, New York City Department of Finance
+#     -   Who the rich are (), Owen Zidar, Princeton University
+
+```
+
+
 ### Meeting #2, Tuesday, February 21, 2023 10 am - noon
 
 -   [Zoom link](https://us02web.zoom.us/j/83282374346)
@@ -10,15 +51,18 @@
     -   [Assessing Census Bureau Migration Data for New York City and State—A Preliminary Look](https://drive.google.com/file/d/1iOnV4z0Gy3meSBQN21H5XHbwTNS7ayro/view?usp=share_link), Andrew Beveridge and Susan Weber
     -   [What can credit bureau data tell us about mobility?](https://drive.google.com/file/d/1iLgj4k4TtOIIwdqHsxjmbXqVaz2swEGk/view?usp=share_link), Andrew Haughwout and Joelle Scally
     -   [What Tax Data Tell Us About New York Taxpayer Migration](https://drive.google.com/file/d/1iLNRxy0M-VJ0tWBlA7cmZjEdUVcuBbfm/view?usp=share_link), E.J. McMahon
+    
+-   Follow-up documents from Andrew Beveridge
+    -   [Understanding Implications of the ”Crippled” 2020 Census, the American Community Study and Other Census Data: Strategies for Survey Researchers, Andrew A. Beveridge, February 23, 2023](https://docs.google.com/presentation/d/1iW22t7GOPMcnbNXm_gP7J91tV5acBDhR?rtpof=true&authuser=donboyd5%40gmail.com&usp=drive_fs)
+    -   [The 2020 Census: Trump, the Pandemic, and Threats to Democracy, Margo Anderson and Andrew A. Beveridge, New Labor Forum, 2022](https://drive.google.com/open?id=1iaZywOqlFFy5D6as0hzj8LwJlw4ilHs5&authuser=donboyd5%40gmail.com&usp=drive_fs)
 
--   Post-meeting notes (to come)
+-   [Post-meeting notes](https://drive.google.com/file/d/1jwe4_mlAMFbI8ys3-YWhVxRw1sOlNKBp/view?usp=share_link)
 
 
 ### Meeting #1, Wednesday, November 9, 2022, 2-4 pm
 
 -   [Agenda package](https://drive.google.com/open?id=1eXjClThslLJcd50YuWBkdkuw_4DxlTGY&authuser=donboyd5%40gmail.com&usp=drive_fs)
-
-<!-- -   Presentation by Karen Schlain and Seth Samelson: [Personal Income Tax Changes - Impact on NYC Resident Effective Tax Rates](https://drive.google.com/open?id=1fwRrZ2b_zj9tVzs9pWSpJHzwvh2Pf6DL&authuser=donboyd5%40gmail.com&usp=drive_fs) -->
+-   Presentation by Karen Schlain and Seth Samelson, New York City Department of Finance: [Personal Income Tax Changes - Impact on NYC Resident Effective Tax Rates](https://drive.google.com/file/d/1fwRrZ2b_zj9tVzs9pWSpJHzwvh2Pf6DL/view)
 
 -   [Post-meeting notes](https://drive.google.com/open?id=1GlW_uIkTPFDM569T2_FfRoTrU_NUvieV&authuser=donboyd5%40gmail.com&usp=drive_fs)
 

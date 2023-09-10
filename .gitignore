@@ -12,3 +12,5 @@ _freeze/
 *.rds
 
 
+
+/.quarto/

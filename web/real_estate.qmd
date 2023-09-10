@@ -4,14 +4,22 @@
 
 Here are recent graphs from [Kastle Systems](https://www.kastle.com/safety-wellness/getting-america-back-to-work/) (also [this](https://www.kastle.com/safety-wellness/getting-america-back-to-work-legal-occupancy/)) that compare the New York metro area to selected other metro areas:
 
-### 10-city daily analysis
+### 10-city [daily](https://www.kastle.com/safety-wellness/getting-america-back-to-work-occupancy-by-day-of-week/)
+
+![](images/daily.jpg)
+
+![](images/image-29939235.png)
 
 ![](images/image-1297262595.png)
 
-### 10-city weekly
+### 10-city [weekly](https://www.kastle.com/safety-wellness/getting-america-back-to-work/#)
+
+![](images/Clipboard Image-01.jpg)
+
+![](images/image-933662599.png)
 
 ![](images/image-352975269.png)
 
 ### Occupancy over time
 
-![](images/image-184462786.png)
+![](images/image-1750486715.png)

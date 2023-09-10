@@ -39,55 +39,43 @@ df1 <- read_csv(mta_path)
 
 glimpse(df1)
 ht(df1)
-# 
-# df2 <- df1 |> 
-#   rename(date=Date,
-#          sub_number=`Subways: Total Estimated Ridership`,
-#          sub_pctpre=`Subways: % of Comparable Pre-Pandemic Day`,
-#          bus_number=`Buses: Total Estimated Ridership`,
-#          bus_pctpre=`Buses: % of Comparable Pre-Pandemic Day`,
-#          lirr_number=`LIRR: Total Estimated Ridership`,
-#          lirr_pctpre=`LIRR: % of 2019 Monthly Weekday/Saturday/Sunday Average`,
-#          mn_number=`Metro-North: Total Estimated Ridership`,
-#          md_pctpre=`Metro-North: % of 2019 Monthly Weekday/Saturday/Sunday Average`,
-#          access_number=`Access-A-Ride: Total Scheduled Trips`,
-#          access_pctpre=`Access-A-Ride: % of Comprable Pre-Pandemic Day`,
-#          bridge_number=`Bridges and Tunnels: Total Traffic`,
-#          bridge_pctpre=`Bridges and Tunnels: % of Comparable Pre-Pandemic Day`)
-# glimpse(df2)
+count(df1 |> mutate(date=as.Date(Date, format="%m/%d/%Y")), date) |> ht()
 
-xmap <- read_csv(
-"vname, vlabel
-sub_number, Subways: Total Estimated Ridership
-sub_pctpre, Subways: % of Comparable Pre-Pandemic Day
-bus_number, Buses: Total Estimated Ridership
-bus_pctpre, Buses: % of Comparable Pre-Pandemic Day
-lirr_number, LIRR: Total Estimated Ridership
-lirr_pctpre, LIRR: % of 2019 Monthly Weekday/Saturday/Sunday Average
-mn_number, Metro-North: Total Estimated Ridership
-mn_pctpre, Metro-North: % of 2019 Monthly Weekday/Saturday/Sunday Average
-access_number, Access-A-Ride: Total Scheduled Trips
-access_pctpre, Access-A-Ride: % of Comparable Pre-Pandemic Day
-bridge_number, Bridges and Tunnels: Total Traffic
-bridge_pctpre, Bridges and Tunnels: % of Comparable Pre-Pandemic Day
-")
-xmap
+# xmap <- read_csv(
+# "vname, vlabel
+# sub_number, Subways: Total Estimated Ridership
+# sub_pctpre, Subways: % of Comparable Pre-Pandemic Day
+# bus_number, Buses: Total Estimated Ridership
+# bus_pctpre, Buses: % of Comparable Pre-Pandemic Day
+# lirr_number, LIRR: Total Estimated Ridership
+# lirr_pctpre, LIRR: % of 2019 Monthly Weekday/Saturday/Sunday Average
+# mn_number, Metro-North: Total Estimated Ridership
+# mn_pctpre, Metro-North: % of 2019 Monthly Weekday/Saturday/Sunday Average
+# access_number, Access-A-Ride: Total Scheduled Trips
+# access_pctpre, Access-A-Ride: % of Comparable Pre-Pandemic Day
+# bridge_number, Bridges and Tunnels: Total Traffic
+# bridge_pctpre, Bridges and Tunnels: % of Comparable Pre-Pandemic Day
+# ")
+# xmap
 
+
+(longnames <- names(df1))
+shortnames <- c("date", 
+               "sub_number", "sub_pctpre",
+               "bus_number", "bus_pctpre",
+               "lirr_number", "lirr_pctpre",
+               "mn_number", "mn_pctpre",
+               "access_number", "access_pctpre",
+               "bridge_number", "bridge_pctpre",
+               "sir_number", "sir_pctpre")
+
+cbind(shortnames, longnames) # verify that names line up
+
+# Rename using a named vector and `all_of()`
+lookup <- setNames(longnames, shortnames)
 
 df2 <- df1 |> 
-  rename(date=Date,
-         sub_number=`Subways: Total Estimated Ridership`,
-         sub_pctpre=`Subways: % of Comparable Pre-Pandemic Day`,
-         bus_number=`Buses: Total Estimated Ridership`,
-         bus_pctpre=`Buses: % of Comparable Pre-Pandemic Day`,
-         lirr_number=`LIRR: Total Estimated Ridership`,
-         lirr_pctpre=`LIRR: % of 2019 Monthly Weekday/Saturday/Sunday Average`,
-         mn_number=`Metro-North: Total Estimated Ridership`,
-         mn_pctpre=`Metro-North: % of 2019 Monthly Weekday/Saturday/Sunday Average`,
-         access_number=`Access-A-Ride: Total Scheduled Trips`,
-         access_pctpre=`Access-A-Ride: % of Comparable Pre-Pandemic Day`,
-         bridge_number=`Bridges and Tunnels: Total Traffic`,
-         bridge_pctpre=`Bridges and Tunnels: % of Comparable Pre-Pandemic Day`) |> 
+  rename(all_of(lookup)) |> 
   mutate(date=as.Date(date, format="%m/%d/%Y")) |> 
   arrange(date)
 glimpse(df2)
@@ -99,21 +87,21 @@ skim(df2)
 
 # calculate trends
 df3 <- df2 |>
-  # select(-starts_with("access")) |> 
+  select(-starts_with("access")) |> 
   mutate(dow=wday(date, label=FALSE),
          ldow=case_when(dow %in% c(1, 7) ~ "Weekend",
                         dow %in% 2:6 ~ "Weekday")) |> 
   pivot_longer(-c(date, dow, ldow)) |> 
-  left_join(xmap |> rename(name=vname), by = join_by(name)) |> 
+  mutate(vlabel=factor(name, levels=shortnames, labels=longnames)) |> 
   group_by(name, vlabel, ldow) |> 
   arrange(date) |> 
   do(cbind(., stldf(.$value, 365))) |> 
   ungroup()
 glimpse(df3)
 summary(df3)
+count(df3, name, vlabel)
 
 # plot --------------------------------------------------------------------
-
 
 capt1a <- "https://data.ny.gov/Transportation/MTA-Daily-Ridership-Data-Beginning-2020/vxuj-8kew"
 (capt1 <- paste0("Source: MTA (", capt1a, "), with loess trend curves added"))
@@ -193,20 +181,3 @@ ggsave(filename=here::here("web", "images", "mta_recovery.png"),
 
 
 # end plot ----------------------------------------------------------------
-
-
-# p1 / p2
-
-  
-# df3 |>
-#   mutate(dow=wday(date, label=FALSE),
-#          ldow=case_when(dow %in% c(1, 7) ~ "weekend",
-#                         dow %in% 2:6 ~ "weekday")) |>
-#   ggplot(aes(date, sub_pctpre, colour=ldow)) +
-#   geom_point(size=0.6) +
-#   geom_smooth()
-#   # geom_line(colour="darkgreen",
-#   #           aes(y=trend), data=function(data) data |> filter(date >= "2020-08-01")) +
-#   theme_bw()
-
-

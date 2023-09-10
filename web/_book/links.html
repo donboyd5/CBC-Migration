@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.4.355">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,14 +17,15 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
 }
-.hanging div.csl-entry {
+.hanging-indent div.csl-entry {
   margin-left:2em;
   text-indent:-2em;
 }
@@ -38,8 +39,7 @@ div.csl-right-inline {
 }
 div.csl-indent {
   margin-left: 2em;
-}
-</style>
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -67,6 +67,12 @@ div.csl-indent {
   "panel-placement": "start",
   "type": "textbox",
   "limit": 20,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -76,7 +82,8 @@ div.csl-indent {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -87,11 +94,16 @@ div.csl-indent {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Links</span></h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./links.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Links</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
@@ -99,115 +111,130 @@ div.csl-indent {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">CBC Migration Working Group</a> 
     </div>
       </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">Introduction</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./links.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Links</span></a>
+  <a href="./links.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Links</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./news.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">News from Working Group members</span></a>
+  <a href="./news.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">News from Working Group members</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Migration</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Migration</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./migration.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Migration</span></a>
+  <a href="./migration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Migration</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Real Estate</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Real Estate</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./real_estate.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Real estate</span></a>
+  <a href="./real_estate.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Real estate</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Work From Home</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Work From Home</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./wfh.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Work from home and commuting</span></a>
+  <a href="./wfh.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Work from home and commuting</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">Taxes and Migration</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Taxes and Migration</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./taxes.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Taxes and migration</span></a>
+  <a href="./taxes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Taxes and migration</span></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bibliography.html" class="sidebar-item-text sidebar-link">Bibliography</a>
+  <a href="./bibliography.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bibliography</span></a>
   </div>
 </li>
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#meetings" id="toc-meetings" class="nav-link active" data-scroll-target="#meetings"><span class="toc-section-number">1.1</span>  Meetings</a>
+  <li><a href="#meetings" id="toc-meetings" class="nav-link active" data-scroll-target="#meetings"><span class="header-section-number">1.1</span> Meetings</a>
   <ul class="collapse">
-  <li><a href="#meeting-2-tuesday-february-21-2023-10-am---noon" id="toc-meeting-2-tuesday-february-21-2023-10-am---noon" class="nav-link" data-scroll-target="#meeting-2-tuesday-february-21-2023-10-am---noon"><span class="toc-section-number">1.1.1</span>  Meeting #2, Tuesday, February 21, 2023 10 am - noon</a></li>
-  <li><a href="#meeting-1-wednesday-november-9-2022-2-4-pm" id="toc-meeting-1-wednesday-november-9-2022-2-4-pm" class="nav-link" data-scroll-target="#meeting-1-wednesday-november-9-2022-2-4-pm"><span class="toc-section-number">1.1.2</span>  Meeting #1, Wednesday, November 9, 2022, 2-4 pm</a></li>
+  <li><a href="#meeting-4-wednesday-june-28-2023-12-2pm" id="toc-meeting-4-wednesday-june-28-2023-12-2pm" class="nav-link" data-scroll-target="#meeting-4-wednesday-june-28-2023-12-2pm"><span class="header-section-number">1.1.1</span> Meeting #4, Wednesday, June 28, 2023 12-2pm</a></li>
+  <li><a href="#meeting-3-monday-april-17-2023-12-2pm" id="toc-meeting-3-monday-april-17-2023-12-2pm" class="nav-link" data-scroll-target="#meeting-3-monday-april-17-2023-12-2pm"><span class="header-section-number">1.1.2</span> Meeting #3, Monday, April 17, 2023 12-2pm</a></li>
+  <li><a href="#meeting-2-tuesday-february-21-2023-10-am---noon" id="toc-meeting-2-tuesday-february-21-2023-10-am---noon" class="nav-link" data-scroll-target="#meeting-2-tuesday-february-21-2023-10-am---noon"><span class="header-section-number">1.1.3</span> Meeting #2, Tuesday, February 21, 2023 10 am - noon</a></li>
+  <li><a href="#meeting-1-wednesday-november-9-2022-2-4-pm" id="toc-meeting-1-wednesday-november-9-2022-2-4-pm" class="nav-link" data-scroll-target="#meeting-1-wednesday-november-9-2022-2-4-pm"><span class="header-section-number">1.1.4</span> Meeting #1, Wednesday, November 9, 2022, 2-4 pm</a></li>
   </ul></li>
-  <li><a href="#the-working-group" id="toc-the-working-group" class="nav-link" data-scroll-target="#the-working-group"><span class="toc-section-number">1.2</span>  The Working Group</a></li>
-  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources"><span class="toc-section-number">1.3</span>  Resources</a></li>
+  <li><a href="#the-working-group" id="toc-the-working-group" class="nav-link" data-scroll-target="#the-working-group"><span class="header-section-number">1.2</span> The Working Group</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources"><span class="header-section-number">1.3</span> Resources</a></li>
   </ul>
 </nav>
     </div>
@@ -216,7 +243,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Links</span></h1>
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Links</span></h1>
 </div>
 
 
@@ -229,12 +256,41 @@ div.csl-indent {
   </div>
   
 
+
 </header>
 
 <section id="meetings" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="meetings"><span class="header-section-number">1.1</span> Meetings</h2>
-<section id="meeting-2-tuesday-february-21-2023-10-am---noon" class="level3" data-number="1.1.1">
-<h3 data-number="1.1.1" class="anchored" data-anchor-id="meeting-2-tuesday-february-21-2023-10-am---noon"><span class="header-section-number">1.1.1</span> Meeting #2, Tuesday, February 21, 2023 10 am - noon</h3>
+<section id="meeting-4-wednesday-june-28-2023-12-2pm" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="meeting-4-wednesday-june-28-2023-12-2pm"><span class="header-section-number">1.1.1</span> Meeting #4, Wednesday, June 28, 2023 12-2pm</h3>
+<ul>
+<li><p><a href="https://us02web.zoom.us/j/85363066529">Zoom link</a></p></li>
+<li><p><a href="https://drive.google.com/file/d/1lGkf3wbM7NqzlG7R5nqe0pklHEvkwyUX/view?usp=sharing">Agenda</a></p></li>
+<li><p>Karen Schlain, NYC Department of Finance, <a href="https://drive.google.com/file/d/1l7mcVZt8wWAmv6xAbzrxzQjBbYvHuPmt/view?usp=sharing">Using Personal Income Tax Data to Analyze Migration</a></p></li>
+<li><p>Owen Zidar, Princeton, <a href="https://drive.google.com/file/d/1kYno9OwpLlbHdzUkUjigMG1Dij1D-Dov/view?usp=sharing">Main Street Millionaires</a></p></li>
+<li><p>CBC fall conference <a href="https://drive.google.com/file/d/1kj7Xn2vlR5QH-KHhSqnoeYMEiuSYEuei/view?usp=sharing">discussion document</a></p></li>
+<li><p><a href="https://drive.google.com/file/d/1m1vCYtraS_Os1P46U3PXRkf8ox9ghYKi/view?pli=1">Post-meeting notes</a></p></li>
+</ul>
+<!-- with full transcript (https://drive.google.com/file/d/1lmPAP99aakYlnjoD40txtLL-YIivMKIH/view?pli=1) -->
+</section>
+<section id="meeting-3-monday-april-17-2023-12-2pm" class="level3" data-number="1.1.2">
+<h3 data-number="1.1.2" class="anchored" data-anchor-id="meeting-3-monday-april-17-2023-12-2pm"><span class="header-section-number">1.1.2</span> Meeting #3, Monday, April 17, 2023 12-2pm</h3>
+<ul>
+<li><a href="https://us02web.zoom.us/j/89958552957">Zoom link</a></li>
+<li><a href="https://drive.google.com/file/d/1joX3-VgVWYFv4ubEnBIDG5QeOg5A1E7N/view?usp=share_link">Agenda</a></li>
+<li>Presentations
+<ul>
+<li><a href="https://drive.google.com/file/d/1j9f12IOoEdGvqTLQE82Lcg8YMYhVKZkG/view?usp=share_link">Jonathan Miller: The Pandemic Era Shift In The Housing Mix</a></li>
+<li><a href="https://drive.google.com/file/d/1k2P8swLF-y6mLxdQ1Ev5v4COO7WKMa2y/view">Arpit Gupta: Urban Flight, Remote Work, and the Urban Doom Loop</a></li>
+<li><a href="https://drive.google.com/file/d/1jmDWOzGGMsMY9T3Yn_shccRFeTImX_vy/view?usp=share_link">Don Boyd: Selected Research on High-Earner Taxes and Migration</a></li>
+<li><a href="https://drive.google.com/drive/folders/1dhlx6dYD4l-Ii0fU9yhaaide9ebcG7w9">Google Drive folder with selected papers on migration</a></li>
+</ul></li>
+<li><a href="https://drive.google.com/file/d/1m0NOwL9X8Ri1X-gFhMUQCuKEzLsAUnFB/view?pli=1">Post-meeting notes</a></li>
+</ul>
+<!-- with transcript (https://drive.google.com/file/d/1lnM-MM5p9TdCemS-18_yFEq9JDwFvnj3/view?pli=1) -->
+</section>
+<section id="meeting-2-tuesday-february-21-2023-10-am---noon" class="level3" data-number="1.1.3">
+<h3 data-number="1.1.3" class="anchored" data-anchor-id="meeting-2-tuesday-february-21-2023-10-am---noon"><span class="header-section-number">1.1.3</span> Meeting #2, Tuesday, February 21, 2023 10 am - noon</h3>
 <ul>
 <li><a href="https://us02web.zoom.us/j/83282374346">Zoom link</a></li>
 <li><a href="https://drive.google.com/file/d/1iEc0YUWQCkWqizuN8smHAlaILf_G9oN_/view?usp=share_link">Agenda</a></li>
@@ -244,17 +300,20 @@ div.csl-indent {
 <li><a href="https://drive.google.com/file/d/1iLgj4k4TtOIIwdqHsxjmbXqVaz2swEGk/view?usp=share_link">What can credit bureau data tell us about mobility?</a>, Andrew Haughwout and Joelle Scally</li>
 <li><a href="https://drive.google.com/file/d/1iLNRxy0M-VJ0tWBlA7cmZjEdUVcuBbfm/view?usp=share_link">What Tax Data Tell Us About New York Taxpayer Migration</a>, E.J. McMahon</li>
 </ul></li>
-<li>Post-meeting notes (to come)</li>
+<li>Follow-up documents from Andrew Beveridge
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1iW22t7GOPMcnbNXm_gP7J91tV5acBDhR?rtpof=true&amp;authuser=donboyd5%40gmail.com&amp;usp=drive_fs">Understanding Implications of&nbsp;the&nbsp;”Crippled” 2020 Census,&nbsp;the&nbsp;American Community Study and Other Census Data: Strategies for Survey Researchers, Andrew A. Beveridge, February 23, 2023</a></li>
+<li><a href="https://drive.google.com/open?id=1iaZywOqlFFy5D6as0hzj8LwJlw4ilHs5&amp;authuser=donboyd5%40gmail.com&amp;usp=drive_fs">The 2020 Census: Trump, the Pandemic, and Threats to Democracy, Margo Anderson and Andrew A. Beveridge, New Labor Forum, 2022</a></li>
+</ul></li>
+<li><a href="https://drive.google.com/file/d/1jwe4_mlAMFbI8ys3-YWhVxRw1sOlNKBp/view?usp=share_link">Post-meeting notes</a></li>
 </ul>
 </section>
-<section id="meeting-1-wednesday-november-9-2022-2-4-pm" class="level3" data-number="1.1.2">
-<h3 data-number="1.1.2" class="anchored" data-anchor-id="meeting-1-wednesday-november-9-2022-2-4-pm"><span class="header-section-number">1.1.2</span> Meeting #1, Wednesday, November 9, 2022, 2-4 pm</h3>
+<section id="meeting-1-wednesday-november-9-2022-2-4-pm" class="level3" data-number="1.1.4">
+<h3 data-number="1.1.4" class="anchored" data-anchor-id="meeting-1-wednesday-november-9-2022-2-4-pm"><span class="header-section-number">1.1.4</span> Meeting #1, Wednesday, November 9, 2022, 2-4 pm</h3>
 <ul>
-<li><a href="https://drive.google.com/open?id=1eXjClThslLJcd50YuWBkdkuw_4DxlTGY&amp;authuser=donboyd5%40gmail.com&amp;usp=drive_fs">Agenda package</a></li>
-</ul>
-<!-- -   Presentation by Karen Schlain and Seth Samelson: [Personal Income Tax Changes - Impact on NYC Resident Effective Tax Rates](https://drive.google.com/open?id=1fwRrZ2b_zj9tVzs9pWSpJHzwvh2Pf6DL&authuser=donboyd5%40gmail.com&usp=drive_fs) -->
-<ul>
-<li><a href="https://drive.google.com/open?id=1GlW_uIkTPFDM569T2_FfRoTrU_NUvieV&amp;authuser=donboyd5%40gmail.com&amp;usp=drive_fs">Post-meeting notes</a></li>
+<li><p><a href="https://drive.google.com/open?id=1eXjClThslLJcd50YuWBkdkuw_4DxlTGY&amp;authuser=donboyd5%40gmail.com&amp;usp=drive_fs">Agenda package</a></p></li>
+<li><p>Presentation by Karen Schlain and Seth Samelson, New York City Department of Finance: <a href="https://drive.google.com/file/d/1fwRrZ2b_zj9tVzs9pWSpJHzwvh2Pf6DL/view">Personal Income Tax Changes - Impact on NYC Resident Effective Tax Rates</a></p></li>
+<li><p><a href="https://drive.google.com/open?id=1GlW_uIkTPFDM569T2_FfRoTrU_NUvieV&amp;authuser=donboyd5%40gmail.com&amp;usp=drive_fs">Post-meeting notes</a></p></li>
 </ul>
 </section>
 </section>
@@ -273,134 +332,134 @@ div.csl-indent {
 </ul>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
-<div id="ref-afxentiouCOVID19HousingBoom2022" class="csl-entry" role="doc-biblioentry">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-afxentiouCOVID19HousingBoom2022" class="csl-entry" role="listitem">
 Afxentiou, Diamando, Peter Harris, and Paul Kutasovic. 2022. <span>“The <span>COVID-19 Housing Boom</span>: <span>Is</span> a 2007-<span>Type Crisis</span> on the <span>Horizon</span>?”</span> <em>Journal of Risk and Financial Management</em> 15 (8): 371. <a href="https://doi.org/10.3390/jrfm15080371">https://doi.org/10.3390/jrfm15080371</a>.
 </div>
-<div id="ref-agrawalRelocationRichMigration2018" class="csl-entry" role="doc-biblioentry">
+<div id="ref-agrawalRelocationRichMigration2018" class="csl-entry" role="listitem">
 Agrawal, David R., and Dirk Foremny. 2018. <span>“Relocation of the <span>Rich</span>: <span>Migration</span> in <span>Response</span> to <span>Top Tax Rate Changes</span> from <span>Spanish Reforms</span>.”</span> <em>SSRN Electronic Journal</em>, April. <a href="https://doi.org/10.2139/ssrn.2796472">https://doi.org/10.2139/ssrn.2796472</a>.
 </div>
-<div id="ref-aksoyWorkingHomeWorld2022a" class="csl-entry" role="doc-biblioentry">
+<div id="ref-aksoyWorkingHomeWorld2022a" class="csl-entry" role="listitem">
 Aksoy, Cevat Giray, Jose Maria Barrero, Nicholas Bloom, Steven J Davis, Mathias Dolls, and Pablo Zarate. 2022. <span>“Working from <span>Home Around</span> the <span>World</span>.”</span> <a href="https://wfhresearch.com/wp-content/uploads/2022/10/Working-from-Home-Around-the-World-16-October-2022.pdf">https://wfhresearch.com/wp-content/uploads/2022/10/Working-from-Home-Around-the-World-16-October-2022.pdf</a>.
 </div>
-<div id="ref-althoffGeographyRemoteWork2022" class="csl-entry" role="doc-biblioentry">
+<div id="ref-althoffGeographyRemoteWork2022" class="csl-entry" role="listitem">
 Althoff, Lukas, Fabian Eckert, Sharat Ganapati, and Conor Walsh. 2022. <span>“The <span>Geography</span> of <span>Remote Work</span>.”</span> <em>Regional Science and Urban Economics</em> 93 (March): 103770. <a href="https://doi.org/10.1016/j.regsciurbeco.2022.103770">https://doi.org/10.1016/j.regsciurbeco.2022.103770</a>.
 </div>
-<div id="ref-barreroInternetAccessIts2021" class="csl-entry" role="doc-biblioentry">
+<div id="ref-barreroInternetAccessIts2021" class="csl-entry" role="listitem">
 Barrero, Jose Maria, Nicholas Bloom, and Steven J Davis. 2021. <span>“Internet <span>Access</span> and Its <span>Implications</span> for <span>Productivity</span>, <span>Inequality</span>, and <span>Resilience</span>.”</span> In <em>Rebuilding the <span>Post-Pandemic Economy</span></em>. <span>Aspen Economic Strategy Group</span>. <a href="https://wfhresearch.com/wp-content/uploads/2021/12/Internet-Access-and-its-Implications-for-Productivity-Inequality-and-Resilience-published.pdf">https://wfhresearch.com/wp-content/uploads/2021/12/Internet-Access-and-its-Implications-for-Productivity-Inequality-and-Resilience-published.pdf</a>.
 </div>
-<div id="ref-barreroShiftRemoteWork2022" class="csl-entry" role="doc-biblioentry">
+<div id="ref-barreroShiftRemoteWork2022" class="csl-entry" role="listitem">
 Barrero, Jose Maria, Nicholas Bloom, Steven J Davis, Brent Meyer, and Emil Mihaylov. 2022. <span>“The <span>Shift</span> to <span>Remote Work Lessens Wage-Growth Pressures</span>.”</span> <a href="https://wfhresearch.com/wp-content/uploads/2022/06/The-Shift-to-Remote-Work-Lessens-Wage-Growth-Pressures-20-June-2022.pdf">https://wfhresearch.com/wp-content/uploads/2022/06/The-Shift-to-Remote-Work-Lessens-Wage-Growth-Pressures-20-June-2022.pdf</a>.
 </div>
-<div id="ref-barroDomesticMigrationState2022" class="csl-entry" role="doc-biblioentry">
+<div id="ref-barroDomesticMigrationState2022" class="csl-entry" role="listitem">
 Barro, Jorge. 2022. <span>“Domestic <span>Migration</span> and <span>State Tax Policy</span>.”</span> <a href="https://www.bakerinstitute.org/sites/default/files/2022-08/BI-Brief-081222-CPF%2BState%2BMigration.pdf">https://www.bakerinstitute.org/sites/default/files/2022-08/BI-Brief-081222-CPF%2BState%2BMigration.pdf</a>.
 </div>
-<div id="ref-bartikWhatJobsAre2020" class="csl-entry" role="doc-biblioentry">
+<div id="ref-bartikWhatJobsAre2020" class="csl-entry" role="listitem">
 Bartik, Alexander W, Zoe B Cullen, Edward L Glaeser, Michael Luca, and Christopher T Stanton. 2020. <span>“What <span>Jobs</span> Are <span>Being Done</span> at <span>Home During</span> the <span>Covid-19 Crisis</span>? <span>Evidence</span> from <span>Firm-Level Surveys</span>.”</span> <span>National Bureau of Economic Research</span>. <a href="https://www.nber.org/system/files/working_papers/w27422/w27422.pdf">https://www.nber.org/system/files/working_papers/w27422/w27422.pdf</a>.
 </div>
-<div id="ref-bloomWhyWorkingHome2021" class="csl-entry" role="doc-biblioentry">
+<div id="ref-bloomWhyWorkingHome2021" class="csl-entry" role="listitem">
 Bloom, Nicholas A. 2021. <span>“Why <span>Working</span> from <span>Home Will Stick</span>.”</span> Working {{Paper}} 28731. <span>National Bureau of Economic Research</span>. <a href="https://wfhresearch.com/wp-content/uploads/2021/04/w28731-3-May-2021.pdf">https://wfhresearch.com/wp-content/uploads/2021/04/w28731-3-May-2021.pdf</a>.
 </div>
-<div id="ref-boydRepealingSALTCap2021" class="csl-entry" role="doc-biblioentry">
+<div id="ref-boydRepealingSALTCap2021" class="csl-entry" role="listitem">
 Boyd, Donald, and Matt Jensen. 2021. <span>“Repealing the <span>SALT Cap</span>: <span class="nocase">State-by-State Impacts</span>.”</span> <em>Tax Notes State</em>, October.
 </div>
-<div id="ref-briggsNoTaxationEmigration2021" class="csl-entry" role="doc-biblioentry">
+<div id="ref-briggsNoTaxationEmigration2021" class="csl-entry" role="listitem">
 Briggs, Joseph. 2021. <span>“No <span>Taxation Without Emigration</span>.”</span> <span>Goldman Sachs</span>. <a href="https://www.gspublishing.com/content/research/en/reports/2021/05/31/3d6d76f2-b14a-42f8-9650-0185c8eec52a.html">https://www.gspublishing.com/content/research/en/reports/2021/05/31/3d6d76f2-b14a-42f8-9650-0185c8eec52a.html</a>.
 </div>
-<div id="ref-brownHowPandemicInfluenced2021" class="csl-entry" role="doc-biblioentry">
+<div id="ref-brownHowPandemicInfluenced2021" class="csl-entry" role="listitem">
 Brown, Jason, and Colton Tousey. 2021. <span>“How the <span>Pandemic Influenced Trends</span> in <span>Domestic Migration</span> Across <span>U</span>.<span>S</span>. <span>Urban Areas</span>.”</span> <em>The Federal Reserve Bank of Kansas City Economic Review</em>, November. <a href="https://doi.org/10.18651/ER/v106n4BrownTousey">https://doi.org/10.18651/ER/v106n4BrownTousey</a>.
 </div>
-<div id="ref-cohenReplicationMillionaireMigration2015a" class="csl-entry" role="doc-biblioentry">
+<div id="ref-cohenReplicationMillionaireMigration2015a" class="csl-entry" role="listitem">
 Cohen, Roger S., Andrew E. Lai, and Charles Steindel. 2015. <span>“A <span>Replication</span> of <span>‘<span>Millionaire Migration</span> and <span>State Taxation</span> of <span>Top Incomes</span>: <span>Evidence</span> from a <span>Natural Experiment</span>’</span> (<span>National Tax Journal</span> 2011).”</span> <em>Public Finance Review</em> 43 (2): 206–25. <a href="https://doi.org/10.1177/1091142114537893">https://doi.org/10.1177/1091142114537893</a>.
 </div>
-<div id="ref-cohenTaxFlightHas2012" class="csl-entry" role="doc-biblioentry">
+<div id="ref-cohenTaxFlightHas2012" class="csl-entry" role="listitem">
 Cohen, Roger, Andrew Lai, and Charles Steindel. 2012. <span>“Tax <span>Flight Has Tangible Effects On Income Tax Revenue</span>.”</span> <em>State Tax Notes</em>, February.
 </div>
-<div id="ref-cohenStateIncomeTaxes2014" class="csl-entry" role="doc-biblioentry">
+<div id="ref-cohenStateIncomeTaxes2014" class="csl-entry" role="listitem">
 ———. 2014. <span>“State <span>Income Taxes</span> and <span>Interstate Migration</span>.”</span> <em>Business Economics</em> 49 (3): 176–90. <a href="https://doi.org/10.1057/be.2014.25">https://doi.org/10.1057/be.2014.25</a>.
 </div>
-<div id="ref-comptrollerscottstringerPandemicImpactNew2021" class="csl-entry" role="doc-biblioentry">
+<div id="ref-comptrollerscottstringerPandemicImpactNew2021" class="csl-entry" role="listitem">
 Comptroller Scott Stringer. 2021. <span>“The <span>Pandemic</span>’s <span>Impact</span> on <span>New York City Migration Patterns</span>.”</span> <span>Office of New York City Comptroller</span>. <a href="https://comptroller.nyc.gov/wp-content/uploads/documents/The-Pandemics-Impact-on-NYC-Migration-Patterns.pdf">https://comptroller.nyc.gov/wp-content/uploads/documents/The-Pandemics-Impact-on-NYC-Migration-Patterns.pdf</a>.
 </div>
-<div id="ref-comptrollerthomasp.dinapoliMovingMovingOut2022" class="csl-entry" role="doc-biblioentry">
+<div id="ref-comptrollerthomasp.dinapoliMovingMovingOut2022" class="csl-entry" role="listitem">
 Comptroller Thomas P. DiNapoli. 2022. <span>“Moving <span>In</span> or <span>Moving Out</span>? <span>New York State Personal Income Taxpayer Migration Trends</span>.”</span> <span>Office of the New York State Comptroller</span>. <a href="https://www.osc.state.ny.us/files/reports/pdf/taxpayer-migration.pdf">https://www.osc.state.ny.us/files/reports/pdf/taxpayer-migration.pdf</a>.
 </div>
-<div id="ref-covenUrbanFlightSeeded2020" class="csl-entry" role="doc-biblioentry">
+<div id="ref-covenUrbanFlightSeeded2020" class="csl-entry" role="listitem">
 Coven, Joshua, Arpit Gupta, and Iris Yao. 2020. <span>“Urban <span>Flight Seeded</span> the <span>COVID-19 Pandemic Across</span> the <span>United States</span>.”</span> <em>SSRN Electronic Journal</em>. <a href="https://doi.org/10.2139/ssrn.3711737">https://doi.org/10.2139/ssrn.3711737</a>.
 </div>
-<div id="ref-daltonImpactRemoteWork2022" class="csl-entry" role="doc-biblioentry">
+<div id="ref-daltonImpactRemoteWork2022" class="csl-entry" role="listitem">
 Dalton, Michael, Matthew Dey, and Mark Loewenstein. 2022. <span>“The <span>Impact</span> of <span>Remote Work</span> on <span>Local Employment</span>, <span>Business Relocation</span>, and <span>Local Home Costs</span>.”</span> 553. <span>U.S. Bureau of Labor Statistics</span>. <a href="https://www.bls.gov/osmr/research-papers/2022/pdf/ec220080.pdf">https://www.bls.gov/osmr/research-papers/2022/pdf/ec220080.pdf</a>.
 </div>
-<div id="ref-dingHasCOVIDReversed2022" class="csl-entry" role="doc-biblioentry">
+<div id="ref-dingHasCOVIDReversed2022" class="csl-entry" role="listitem">
 Ding, Lei, and Jackelyn Hwang. 2022. <span>“Has <span>COVID Reversed Gentrification</span> in <span>Major U</span>.<span>S</span>. <span>Cities</span>? <span>An Empirical Examination</span> of <span>Residential Mobility</span> in <span>Gentrifying Neighborhoods During</span> the <span>COVID-19 Crisis</span>.”</span> Working Paper ({{Federal Reserve Bank}} of {{Philadelphia}}) 22-20. Working Paper (<span>Federal Reserve Bank</span> of <span>Philadelphia</span>). <span>Federal Reserve Bank of Philadelphia</span>. <a href="https://doi.org/10.21799/frbp.wp.2022.20">https://doi.org/10.21799/frbp.wp.2022.20</a>.
 </div>
-<div id="ref-dingelHowManyJobs2020" class="csl-entry" role="doc-biblioentry">
+<div id="ref-dingelHowManyJobs2020" class="csl-entry" role="listitem">
 Dingel, Jonathan I, and Brent Neiman. 2020. <span>“How <span>Many Jobs Can</span> Be <span>Done</span> at <span>Home</span>?”</span> April, 19. <a href="https://www.nber.org/system/files/working_papers/w26948/w26948.pdf">https://www.nber.org/system/files/working_papers/w26948/w26948.pdf</a>.
 </div>
-<div id="ref-donnellyNewYorkersMove2018" class="csl-entry" role="doc-biblioentry">
+<div id="ref-donnellyNewYorkersMove2018" class="csl-entry" role="listitem">
 Donnelly, Frank, Anastasia Clark, and Janine Billadello. 2018. <span>“New <span>Yorkers</span> on the <span>Move</span>: <span>Recent Migration Trends</span> for the <span>City</span> and <span>Metro Area</span>.”</span> <span>Weissman Center for International Business, Baruch College, CUNY</span>. <a href="https://zicklin.baruch.cuny.edu/wp-content/uploads/sites/10/2018/02/Paper-Series-Feb.-2018-No.-15-New-Yorkers-on-the-Move.pdf">https://zicklin.baruch.cuny.edu/wp-content/uploads/sites/10/2018/02/Paper-Series-Feb.-2018-No.-15-New-Yorkers-on-the-Move.pdf</a>.
 </div>
-<div id="ref-freyBigCitiesSaw2022" class="csl-entry" role="doc-biblioentry">
+<div id="ref-freyBigCitiesSaw2022" class="csl-entry" role="listitem">
 Frey, William H. 2022. <span>“Big Cities Saw Historic Population Losses While Suburban Growth Declined During the Pandemic.”</span> <em>The Brookings Institution</em>. <a href="https://www.brookings.edu/research/big-cities-saw-historic-population-losses-while-suburban-growth-declined-during-the-pandemic/">https://www.brookings.edu/research/big-cities-saw-historic-population-losses-while-suburban-growth-declined-during-the-pandemic/</a>.
 </div>
-<div id="ref-guptaFlatteningCurvePandemicInduced2021" class="csl-entry" role="doc-biblioentry">
+<div id="ref-guptaFlatteningCurvePandemicInduced2021" class="csl-entry" role="listitem">
 Gupta, Arpit, Vrinda Mittal, Jonas Peeters, and Stijn Van Nieuwerburgh. 2021. <span>“Flattening the <span>Curve</span>: <span>Pandemic-Induced Revaluation</span> of <span>Urban Real Estate</span>.”</span> Working {{Paper}}. <a href="https://static1.squarespace.com/static/56086d00e4b0fb7874bc2d42/t/611288e768fd8d6659d84fdd/1628604656639/NYCempty.pdf">https://static1.squarespace.com/static/56086d00e4b0fb7874bc2d42/t/611288e768fd8d6659d84fdd/1628604656639/NYCempty.pdf</a>.
 </div>
-<div id="ref-haslagBoiseHowMigration2022" class="csl-entry" role="doc-biblioentry">
+<div id="ref-haslagBoiseHowMigration2022" class="csl-entry" role="listitem">
 Haslag, Peter, and Daniel Weagley. 2022. <span>“From <span>L</span>.<span>A</span>. To <span>Boise</span>: <span>How Migration Has Changed During</span> the <span>COVID-19 Pandemic</span>.”</span> Working {{Paper}}. <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3808326">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3808326</a>.
 </div>
-<div id="ref-hongPandemicFlightWealthy2022" class="csl-entry" role="doc-biblioentry">
+<div id="ref-hongPandemicFlightWealthy2022" class="csl-entry" role="listitem">
 Hong, Nicole, and Matthew Haag. 2022. <span>“The <span>Pandemic Flight</span> of <span>Wealthy New Yorkers Was</span> a <span class="nocase">Once-in-a-Century Shock</span>.”</span> <em>The New York Times</em>. <a href="https://www.nytimes.com/2022/06/28/nyregion/wealthy-pandemic-nyc.html">https://www.nytimes.com/2022/06/28/nyregion/wealthy-pandemic-nyc.html</a>.
 </div>
-<div id="ref-lavelleMigrationPatternsStart2022" class="csl-entry" role="doc-biblioentry">
+<div id="ref-lavelleMigrationPatternsStart2022" class="csl-entry" role="listitem">
 Lavelle, Martin, and Elizabeth Kepner. 2022. <span>“U.<span>S</span>. <span>Migration Patterns Before</span> and <span>After</span> the <span>Start</span> of the <span>Covid-19 Pandemic</span> - <span>Federal Reserve Bank</span> of <span>Chicago</span>.”</span> <em>Federal Reserve Bank of Chicago: Midwest Economy Blog</em>. <a href="https://www.chicagofed.org/publications/blogs/midwest-economy/2022/migration-before-and-during-pandemic">https://www.chicagofed.org/publications/blogs/midwest-economy/2022/migration-before-and-during-pandemic</a>.
 </div>
-<div id="ref-mcmahonNYWasLeaking2021" class="csl-entry" role="doc-biblioentry">
+<div id="ref-mcmahonNYWasLeaking2021" class="csl-entry" role="listitem">
 McMahon, E. J. 2021. <span>“<span>NY</span> Was Leaking Income Millionaires in Pandemic Run-up - <span>Empire Center</span> for <span>Public Policy</span>.”</span> <em>Empire Center for Public Policy</em>. <a href="https://www.empirecenter.org/publications/ny-was-leaking-income-millionaires-in-pandemic-run-up/">https://www.empirecenter.org/publications/ny-was-leaking-income-millionaires-in-pandemic-run-up/</a>.
 </div>
-<div id="ref-mcmahonTrackingIncreasedOutflow2022" class="csl-entry" role="doc-biblioentry">
+<div id="ref-mcmahonTrackingIncreasedOutflow2022" class="csl-entry" role="listitem">
 ———. 2022. <span>“Tracking the Increased Outflow of <span>NY</span> Taxpayers in 2019-20.”</span> <em>Empire Center for Public Policy</em>. <a href="https://www.empirecenter.org/publications/new-york-taxpayer-migration-surged-in-2019-20-irs-data-show/">https://www.empirecenter.org/publications/new-york-taxpayer-migration-surged-in-2019-20-irs-data-show/</a>.
 </div>
-<div id="ref-newyorkcitydepartmentofcityplanningpopulationdivisionUnderstandingNewYork2022" class="csl-entry" role="doc-biblioentry">
+<div id="ref-newyorkcitydepartmentofcityplanningpopulationdivisionUnderstandingNewYork2022" class="csl-entry" role="listitem">
 New York City Department of City Planning, Population Division. 2022. <span>“Understanding <span>New York City</span>’s <span>Population Trends</span>.”</span> <span>New York City Department of City Planning, Population Division</span>. <a href="https://www1.nyc.gov/assets/planning/download/pdf/planning-level/nyc-population/population-estimates/understanding-current-population-trends-in-nyc.pdf">https://www1.nyc.gov/assets/planning/download/pdf/planning-level/nyc-population/population-estimates/understanding-current-population-trends-in-nyc.pdf</a>.
 </div>
-<div id="ref-newyorkcitydepartmentoffinancedivisionoftaxpolicyanddataanalyticsPersonalIncomeTax2022" class="csl-entry" role="doc-biblioentry">
+<div id="ref-newyorkcitydepartmentoffinancedivisionoftaxpolicyanddataanalyticsPersonalIncomeTax2022" class="csl-entry" role="listitem">
 New York City Department of Finance Division of Tax Policy and Data Analytics, Karen Schlain, and Seth Samelson. 2022. <span>“Personal <span>Income Tax Changes</span> <span>Impact</span> on <span>NYC Resident Effective Tax Rates</span>.”</span>
 </div>
-<div id="ref-programonapplieddemographics2021CountyEconomic2022" class="csl-entry" role="doc-biblioentry">
+<div id="ref-programonapplieddemographics2021CountyEconomic2022" class="csl-entry" role="listitem">
 Program on Applied Demographics. 2022. <span>“2021 <span>County</span> and <span>Economic Development Regions Population Estimates</span>: <span>Analysis</span> of the <span>US Census Bureau Vintage</span> 2021 <span>Total County Population Estimates</span>.”</span> <span>The Cornell Jeb E. Brooks School of Public Policy</span>. <a href="https://pad.human.cornell.edu/papers/downloads/V2021highlights.pdf">https://pad.human.cornell.edu/papers/downloads/V2021highlights.pdf</a>.
 </div>
-<div id="ref-ramaniDonutEffectCovid192021" class="csl-entry" role="doc-biblioentry">
+<div id="ref-ramaniDonutEffectCovid192021" class="csl-entry" role="listitem">
 Ramani, Arjun, and Nicholas Bloom. 2021. <span>“The <span>Donut Effect</span> of <span>Covid-19</span> on <span>Cities</span>.”</span> <a href="https://wfhresearch.com/wp-content/uploads/2021/05/DONUT_MAY21.pdf">https://wfhresearch.com/wp-content/uploads/2021/05/DONUT_MAY21.pdf</a>.
 </div>
-<div id="ref-rauhBehavioralResponsesState2022" class="csl-entry" role="doc-biblioentry">
+<div id="ref-rauhBehavioralResponsesState2022" class="csl-entry" role="listitem">
 Rauh, Joshua, and Ryan Shyu. 2022. <span>“Behavioral <span>Responses</span> to <span>State Income Taxation</span> of <span>High Earners</span>: <span>Evidence</span> from <span>California</span>.”</span> w26349. <span>Cambridge, MA</span>: <span>National Bureau of Economic Research</span>. <a href="https://doi.org/10.3386/w26349">https://doi.org/10.3386/w26349</a>.
 </div>
-<div id="ref-schulmanMigrationHouseholdsNew2021" class="csl-entry" role="doc-biblioentry">
+<div id="ref-schulmanMigrationHouseholdsNew2021" class="csl-entry" role="listitem">
 Schulman, Adam, and Gyan Bhanot. 2021. <span>“Migration of Households from <span>New York City</span> and the <span>Second Peak</span> in <span>Covid-19</span> Cases in <span>New Jersey</span>, <span>Connecticut</span> and <span>New York Counties</span>.”</span> Preprint. <span>PubMed Central</span>. <a href="https://doi.org/10.1101/2021.03.29.21254583">https://doi.org/10.1101/2021.03.29.21254583</a>.
 </div>
-<div id="ref-toukabriBigPopulationShifts2022" class="csl-entry" role="doc-biblioentry">
+<div id="ref-toukabriBigPopulationShifts2022" class="csl-entry" role="listitem">
 Toukabri, Amel, and Crystal Delbé. 2022. <span>“Big <span>Population Shifts</span> in <span>Cities</span> and <span>Towns One Year Into Pandemic</span>.”</span> <em>U.S. Bureau of the Census</em>. <a href="https://www.census.gov/library/stories/2022/05/population-shifts-in-cities-and-towns-one-year-into-pandemic.html">https://www.census.gov/library/stories/2022/05/population-shifts-in-cities-and-towns-one-year-into-pandemic.html</a>.
 </div>
-<div id="ref-whitakerPopulationMigrationGenerations2019" class="csl-entry" role="doc-biblioentry">
+<div id="ref-whitakerPopulationMigrationGenerations2019" class="csl-entry" role="listitem">
 Whitaker, Stephan D. 2019. <span>“Population, <span>Migration</span>, and <span>Generations</span> in <span>Urban Neighborhoods</span>.”</span> <em>Economic Commentary (Federal Reserve Bank of Cleveland)</em>, May, 1–5. <a href="https://doi.org/10.26509/frbc-ec-201908">https://doi.org/10.26509/frbc-ec-201908</a>.
 </div>
-<div id="ref-youngEightBriefResponses2018" class="csl-entry" role="doc-biblioentry">
+<div id="ref-youngEightBriefResponses2018" class="csl-entry" role="listitem">
 Young, Cristobal. 2018. <span>“Eight <span>Brief Responses</span> about <span>Millionaire Migration</span>.”</span> <a href="http://cristobalyoung.com/development/wp-content/uploads/2018/11/Eight_Brief_Responses.pdf">http://cristobalyoung.com/development/wp-content/uploads/2018/11/Eight_Brief_Responses.pdf</a>.
 </div>
-<div id="ref-youngHowShocksIncentives2022" class="csl-entry" role="doc-biblioentry">
+<div id="ref-youngHowShocksIncentives2022" class="csl-entry" role="listitem">
 Young, Cristobal, and Ithai Lurie. 2022a. <span>“How <span>Shocks</span> to <span>Incentives</span> and <span>Embeddedness Shape Millionaire Tax Flight</span>.”</span> In <em>Utah <span>Tax Invitational</span>, 2022</em>, 45. <span>Salt Lake City, Utah</span>.
 </div>
-<div id="ref-youngHowIncentivesEmbeddedness2022" class="csl-entry" role="doc-biblioentry">
+<div id="ref-youngHowIncentivesEmbeddedness2022" class="csl-entry" role="listitem">
 ———. 2022b. <span>“How <span>Incentives</span> and <span>Embeddedness Shape Millionaire Tax Flight</span>.”</span> <span>Washington Center for Equitable Growth</span>. <a href="https://equitablegrowth.org/wp-content/uploads/2022/07/072822-WP-Taxing-the-Rich-How-Incentives-and-Embeddedness-Shape-Millionaire-Tax-Flight-Young-and-Lurie.pdf">https://equitablegrowth.org/wp-content/uploads/2022/07/072822-WP-Taxing-the-Rich-How-Incentives-and-Embeddedness-Shape-Millionaire-Tax-Flight-Young-and-Lurie.pdf</a>.
 </div>
-<div id="ref-youngMillionaireMigrationState2011" class="csl-entry" role="doc-biblioentry">
+<div id="ref-youngMillionaireMigrationState2011" class="csl-entry" role="listitem">
 Young, Cristobal, and Charles Varner. 2011. <span>“Millionaire <span>Migration</span> and <span>State Taxation</span> of <span>Top Incomes</span>: <span>Evidence</span> from a <span>Natural Experiment</span>.”</span> <em>National Tax Journal</em> 64 (2): 255–84. <a href="http://ntj.tax.org/wwtax/ntjrec.nsf/175d710dffc186a385256a31007cb40f/6f4735598cfb55f5852578ab004b5979/$FILE/A02-Young.pdf">http://ntj.tax.org/wwtax/ntjrec.nsf/175d710dffc186a385256a31007cb40f/6f4735598cfb55f5852578ab004b5979/$FILE/A02-Young.pdf</a>.
 </div>
-<div id="ref-youngReplyReplicationMillionaire2015" class="csl-entry" role="doc-biblioentry">
+<div id="ref-youngReplyReplicationMillionaire2015" class="csl-entry" role="listitem">
 ———. 2015. <span>“A <span>Reply</span> to “<span>A Replication</span> of <span>‘<span>Millionaire Migration</span> and <span>State Taxation</span> of <span>Top Incomes</span>: <span>Evidence</span> from a <span>Natural Experiment</span>’</span> (<span>National Tax Journal</span> 2011).”</span> <em>Public Finance Review</em> 43 (2): 226–34. <a href="https://doi.org/10.1177/1091142114537896">https://doi.org/10.1177/1091142114537896</a>.
 </div>
-<div id="ref-youngMillionaireMigrationTaxation2016" class="csl-entry" role="doc-biblioentry">
+<div id="ref-youngMillionaireMigrationTaxation2016" class="csl-entry" role="listitem">
 Young, Cristobal, Charles Varner, Ithai Z. Lurie, and Richard Prisinzano. 2016. <span>“Millionaire <span>Migration</span> and <span>Taxation</span> of the <span>Elite</span>: <span>Evidence</span> from <span>Administrative Data</span>.”</span> <em>American Sociological Review</em> 81 (3): 421–46. <a href="https://doi.org/10.1177/0003122416639625">https://doi.org/10.1177/0003122416639625</a>.
 </div>
 </div>
@@ -434,9 +493,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -472,10 +545,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -485,8 +557,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -501,6 +582,195 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        for (let i = 0; i < 2; i++) {
+          container.appendChild(note.children[i].cloneNode(true));
+        }
+        return container.innerHTML
+      } else {
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        console.log("RESIZE");
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -553,6 +823,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
+
 
 
 
